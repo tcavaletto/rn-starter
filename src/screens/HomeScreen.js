@@ -2,14 +2,15 @@ import React from "react";
 import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 
 const HomeScreen = (props) => {
+  var navProp = props.navigation;
   return (
     <View>
       <Text style={styles.text}>Hi there!</Text>
       <Button
-        onPress={() => props.navigation.navigate("Components")}
+        onPress={() => navProp.navigate("Components")}
         title="Go to Components Demo"
       />
-      <TouchableOpacity onPress={() => props.navigation.navigate("List")}>
+      <TouchableOpacity onPress={() => navProp.navigate("List")}>
         <Text>Go to List Demo</Text>
         <Text>Go to List Demo</Text>
         <Text>Go to List Demo</Text>
